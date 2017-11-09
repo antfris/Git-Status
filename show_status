@@ -149,7 +149,7 @@ if __name__ == "__main__":
 		    result = bcolors.FAIL + "Changes" + bcolors.ENDC
 
                 # Write to screen
-                sys.stdout.write("-- " + bcolors.OKBLUE + infile.ljust(55) + bcolors.ENDC + branch + " : " + result +"\n")
+                sys.stdout.write("-- " + bcolors.OKBLUE + infile.split('/')[-1].ljust(50, ' ') + bcolors.ENDC + branch + " : " + result +"\n")
 
             else:
                 #Print some repo details
@@ -167,4 +167,3 @@ if __name__ == "__main__":
         show_error("Error: None of those sub directories had a .git file.\n")
 
     sys.stdout.write("Done\n")
-
